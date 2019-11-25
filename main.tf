@@ -25,6 +25,7 @@ module "dns" {
 module "transit-opentest" {
     source              = "./modules/transit-opentest/"
     region = "${var.region}"
+    my_ip               = var.my_ip
 
     component_name              = "transit-opentest"
     cidr                        = "10.10.0.0/16"
